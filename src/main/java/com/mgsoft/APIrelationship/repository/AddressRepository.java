@@ -8,7 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AddressRepository extends CrudRepository<Address, Long> {
 
-    @Autowired
-    Address address = new Address();
-
 }

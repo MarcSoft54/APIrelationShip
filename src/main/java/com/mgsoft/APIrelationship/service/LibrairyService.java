@@ -17,5 +17,10 @@ public class LibrairyService {
         return librairyRepository.findAll();
     }
 
+    public Librairy createLibrairy(Librairy librairy){
+        Librairy lib= librairyRepository.save(librairy);
+    return lib;
+    }
+
 
 }

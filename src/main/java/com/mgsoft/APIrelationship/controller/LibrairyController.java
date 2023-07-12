@@ -4,6 +4,7 @@ import com.mgsoft.APIrelationship.model.Librairy;
 import com.mgsoft.APIrelationship.service.LibrairyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,5 +18,12 @@ public class LibrairyController {
     @GetMapping(path = "/librairie")
     public Iterable<Librairy> getLibrairies(){
         return  librairyService.getLibrairie();
+    }
+
+
+    @PostMapping(path = "/lib")
+    public Librairy PostLibrairy(Librairy librairy){
+        Librairy lib = librairyService.createLibrairy(librairy);
+    return lib;
     }
 }

@@ -8,6 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LibrairyRepository extends CrudRepository<Librairy, Long> {
 
-    @Autowired
-    Librairy librairy = new Librairy();
 }
